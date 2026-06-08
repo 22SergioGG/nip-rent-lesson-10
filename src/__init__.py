@@ -53,6 +53,22 @@ Returns:
 -------
     float: The annual balance.
 
+Example:
+-------
+    >>> from src.models import Parameters
+    >>> from src.manager import Manager
+    >>> params = Parameters()
+    >>> manager = Manager(params)
+    >>> manager.calculate_annual_balance(year=2025)
+
+    >>> settlement = manager.get_settlement('apart-polanka', 2025, 1)
+    >>> tenant_settlements = manager.create_tenants_settlements(settlement)
+
+    >>> debtors = manager.get_debtors('apart-polanka', 2025, 2)
+    >>> print(debtors)
+
+    >>> tax = manager.calculate_tax(2025, 1, 0.085)
+    >>> print(tax)
 Authors
 ------
 Łukasz Kułacz - initial implementation, testing, documentation
