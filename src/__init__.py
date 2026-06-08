@@ -42,8 +42,20 @@ Highlights
 - Clean separation between data schema and business rules.
 - Ready for automatic API documentation with ``pdoc``.
 
+Args:
+----
+    year (int): The year for which to calculate the balance.
+    month (int): The month for which to compute results.
+    apartment_key (str): the apartment identifier used to look up apartment data and related bills.
+    tenant_name (str): the tenant’s name used to check blacklist status or match transfers.
+
+Returns:
+-------
+    float: The annual balance.
+
 Authors
 ------
 Łukasz Kułacz - initial implementation, testing, documentation
+Sergiusz Sliwa
 
 """
