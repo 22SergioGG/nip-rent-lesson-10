@@ -35,7 +35,7 @@ jobs:
     - name: Generate Docs
       run: uv run pdoc src/ -o ./docs-output 
 
-    - name: Upload Artifact
+    - name: Upload Artifacts
       uses: actions/upload-pages-artifact@v3
       with:
         path: './docs-output'
